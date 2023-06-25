@@ -1,0 +1,48 @@
+:root {
+  --bs-link-color: white;
+}
+
+body {
+height: 100vh;
+display: flex;
+overflow: hidden;
+flex-direction: column;
+}
+
+.navbar {
+  height: 60px;;
+}
+
+.my-sidebar {
+  height: calc(100vh - 100px)
+}
+
+.fa-bell {
+  color: #ff8f00;
+}
+
+.dropdown-menu[data-bs-popper] {
+  top: 60%;
+  left: -155px;
+}
+
+.my-search {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.navbar-nav {
+  grid-row: 0;
+}
+
+.mobile-logo {
+  width: 50px;
+}
+
+.top-info {
+  height: 70px;
+}
+
+.sidebar-col {
+  --bs-gutter-x: 0;
+}
