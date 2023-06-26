@@ -14,16 +14,16 @@ flex-direction: column;
 }
 
 .my-sidebar {
-  height: calc(100vh - 60px)
+  height: calc(100vh - 60px);
+  width: 50px;
 }
 
 .fa-bell {
   color: #ff8f00;
 }
 
-.dropdown-menu[data-bs-popper] {
-  top: 60%;
-  left: -155px;
+.mobile-logo {
+  width: 50px;
 }
 
 .my-search {
@@ -31,18 +31,10 @@ flex-direction: column;
   flex-basis: 0;
 }
 
-.navbar-nav {
-  grid-row: 0;
-}
+/*****MEDIA QUERY*****/
 
-.mobile-logo {
-  width: 50px;
-}
-
-.top-info {
-  height: 70px;
-}
-
-.sidebar-col {
-  --bs-gutter-x: 0;
+@media (min-width: 992px) {
+  .my-sidebar {
+    width: 150px;
+  }
 }
