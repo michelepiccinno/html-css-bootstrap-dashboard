@@ -16,6 +16,7 @@ flex-direction: column;
 .my-sidebar {
   height: calc(100vh - 60px);
   width: 50px;
+  --bs-dark-rgb: 5, 30, 52;
 }
 
 .my-sidebar a {
@@ -45,6 +46,10 @@ flex-direction: column;
   background-color: #165bba;
 }
 
+.card .card-header {
+  font-size: 22px;
+  font-weight: 500;
+}
 
 /*****MEDIA QUERY*****/
 
