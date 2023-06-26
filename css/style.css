@@ -18,6 +18,11 @@ flex-direction: column;
   width: 50px;
 }
 
+.my-sidebar a {
+  text-decoration: none;
+  color: white;
+}
+
 .fa-bell {
   color: #ff8f00;
 }
@@ -30,6 +35,16 @@ flex-direction: column;
   flex-grow: 1;
   flex-basis: 0;
 }
+
+.top-status-bar {
+  background-color: #1b72e8;
+  color: white;
+}
+
+.top-status-bar .badge {
+  background-color: #165bba;
+}
+
 
 /*****MEDIA QUERY*****/
 
