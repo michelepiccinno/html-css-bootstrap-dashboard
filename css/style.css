@@ -14,7 +14,7 @@ flex-direction: column;
 }
 
 .my-sidebar {
-  height: calc(100vh - 100px)
+  height: calc(100vh - 60px)
 }
 
 .fa-bell {
