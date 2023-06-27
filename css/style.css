@@ -3,10 +3,10 @@
 }
 
 body {
-height: 100vh;
-display: flex;
-overflow: hidden;
-flex-direction: column;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
 }
 
 .navbar {
@@ -86,6 +86,11 @@ li:hover {
 
 .card-stats img {
   width: 100%;
+}
+
+i {
+  --bs-body-color: 255, 255, 255;
+  opacity: 1;
 }
 
 /*****MEDIA QUERY*****/
