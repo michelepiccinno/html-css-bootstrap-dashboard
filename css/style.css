@@ -51,6 +51,10 @@ flex-direction: column;
   font-weight: 500;
 }
 
+.card img {
+  width: 25px;
+}
+
 /*****MEDIA QUERY*****/
 
 @media (min-width: 992px) {
