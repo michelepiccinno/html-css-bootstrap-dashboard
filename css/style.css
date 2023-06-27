@@ -88,11 +88,6 @@ li:hover {
   width: 100%;
 }
 
-i {
-  --bs-body-color: 255, 255, 255;
-  opacity: 1;
-}
-
 /*****MEDIA QUERY*****/
 
 @media (min-width: 992px) {
