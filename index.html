@@ -17,7 +17,7 @@
   <title>Dashboard</title>
 </head>
 
-<body class="container">
+<body>
 
   <!-- HEADER NAVBAR -->
   <div class="row">
@@ -25,7 +25,7 @@
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="bg-white d-flex w-100">
           <img class="mobile-logo d-lg-none" src="img/mobile-logo.png" alt="">
-          <img class="d-none d-lg-block" src="img/logo.svg" alt="">
+          <img class="d-none d-lg-block ps-1" src="img/logo.svg" alt="">
           <form class="my-search d-flex w-100">
             <input class="form-control m-2" type="search" placeholder="Prova a cercare: Lezioni di Laravel"
               aria-label="Search">
@@ -41,16 +41,18 @@
               <i class="fa-solid fa-ellipsis-vertical"></i>
             </li>
             <li class="nav-item dropdown p-2">
-              <a class="nav-link dropdown p-0" href="#" id="navbarDropdownMenuLink" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="fa-solid fa-bell"></i>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item " href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <div class="btn-group dropstart">
+                <button type="button" class="dropdown drop-bell" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <i class="fa-solid fa-bell"></i>
+                </button>
+                <ul class="dropdown-menu">
+                  <li>Profilo</li>
+                  <li>Fatturazione</li>
+                  <li>Logout</li>
                 </ul>
+              </div>
             </li>
-            </a>
           </ul>
         </div>
       </nav>
@@ -62,27 +64,27 @@
     <div class="col d-flex">
       <div class="my-sidebar d-flex flex-column text-white bg-dark text-center py-4">
         <ul class="nav nav-pills mb-auto flex-column gap-2">
-          <li>
+          <li class="text-sidebar">
             <i class="fa-solid fa-house"></i>
             <a class="d-none d-lg-inline-block ps-2">Home</a>
           </li>
-          <li>
+          <li class="text-sidebar">
             <i class="fa-solid fa-chart-simple"></i>
             <a class="d-none d-lg-inline-block ps-2">Stats</a>
           </li>
-          <li>
+          <li class="text-sidebar">
             <i class="fa-solid fa-signal"></i>
             <a class="d-none d-lg-inline-block ps-2">Signal</a>
           </li>
         </ul>
-        <div class="nav-link">
+        <div class="nav-link text-sidebar">
           <i class="fa-solid fa-gear"></i>
           <a class="d-none d-lg-inline-block ps-2">Admin</a>
         </div>
       </div>
 
       <!-- MAIN -->
-      <div class="container">
+      <div class="container-fluid main-container-fluid">
         <div class="row gy-3">
           <!-- TOP STATUS BAR -->
           <div class="col-12 top-status-bar">
@@ -113,23 +115,93 @@
           </div>
           <!-- CARD SECTION -->
           <div class="col-12 col-lg-8">
-            <div class="row">
+            <div class="row gy-3">
               <div class="col-12">
-                <div class="card">
-                  <div class="card-header">
-                    Prossime classi
-                  </div>
-                  <ul class="list-group list-group-flush px-2">
-                    <li class="list-group-item">Nome</li>
-                    <li class="list-group-item"> <img src="img/class-avatar.jpg" alt=""> Classe 75</li>
-                    <li class="list-group-item"> <img src="img/class-avatar.jpg" alt=""> Classe 76</li>
-                    <li class="list-group-item"> <img src="img/class-avatar.jpg" alt=""> Classe 77</li>
-                    <li class="list-group-item"> <img src="img/class-avatar.jpg" alt=""> Classe 78</li>
-                    <li class="list-group-item"> <img src="img/class-avatar.jpg" alt=""> Classe 79</li>
-                    <li class="list-group-item"> <img src="img/class-avatar.jpg" alt=""> Classe 80</li>
-                    <li class="list-group-item"> <img src="img/class-avatar.jpg" alt=""> Classe 81</li>
-                    <li class="list-group-item"> <img src="img/class-avatar.jpg" alt=""> Classe 82</li>
-                  </ul>
+                <div class="card card-table">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Prossime classi</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Nome</td>
+                        <td>Data inizio</td>
+                        <td>ROI</td>
+                        <td>Stato</td>
+                        <td>Azioni</td>
+                      </tr>
+                      <tr>
+                        <td><img src="img/class-avatar.jpg" alt=""> Classe 75</td>
+                        <td>15 Feb 2021</td>
+                        <td>20%</td>
+                        <td><span class="badge text-bg-info">Done</span></td>
+                        <td><i class="fa-solid fa-pencil border p-2 rounded-1 me-2"></i><i
+                            class="fa-solid fa-trash border p-2 rounded-1"></i></td>
+                      </tr>
+                      <tr>
+                        <td><img src="img/class-avatar.jpg" alt=""> Classe 75</td>
+                        <td>15 Feb 2021</td>
+                        <td>20%</td>
+                        <td><span class="badge text-bg-danger">Done</span></td>
+                        <td><i class="fa-solid fa-pencil border p-2 rounded-1 me-2"></i><i
+                            class="fa-solid fa-trash border p-2 rounded-1"></i></td>
+                      </tr>
+                      <tr>
+                        <td><img src="img/class-avatar.jpg" alt=""> Classe 75</td>
+                        <td>15 Feb 2021</td>
+                        <td>20%</td>
+                        <td><span class="badge text-bg-warning">Done</span></td>
+                        <td><i class="fa-solid fa-pencil border p-2 rounded-1 me-2"></i><i
+                            class="fa-solid fa-trash border p-2 rounded-1"></i></td>
+                      </tr>
+                      <tr>
+                        <td><img src="img/class-avatar.jpg" alt=""> Classe 75</td>
+                        <td>15 Feb 2021</td>
+                        <td>20%</td>
+                        <td><span class="badge text-bg-success">Done</span></td>
+                        <td><i class="fa-solid fa-pencil border p-2 rounded-1 me-2"></i><i
+                            class="fa-solid fa-trash border p-2 rounded-1"></i></td>
+                      </tr>
+                      <tr>
+                        <td><img src="img/class-avatar.jpg" alt=""> Classe 75</td>
+                        <td>15 Feb 2021</td>
+                        <td>20%</td>
+                        <td><span class="badge text-bg-secondary">Done</span></td>
+                        <td><i class="fa-solid fa-pencil border p-2 rounded-1 me-2"></i><i
+                            class="fa-solid fa-trash border p-2 rounded-1"></i></td>
+                      </tr>
+                      <tr>
+                        <td><img src="img/class-avatar.jpg" alt=""> Classe 75</td>
+                        <td>15 Feb 2021</td>
+                        <td>20%</td>
+                        <td><span class="badge text-bg-success">Done</span></td>
+                        <td><i class="fa-solid fa-pencil border p-2 rounded-1 me-2"></i><i
+                            class="fa-solid fa-trash border p-2 rounded-1"></i></td>
+                      </tr>
+                      <tr>
+                        <td><img src="img/class-avatar.jpg" alt=""> Classe 75</td>
+                        <td>15 Feb 2021</td>
+                        <td>20%</td>
+                        <td><span class="badge text-bg-success">Done</span></td>
+                        <td><i class="fa-solid fa-pencil border p-2 rounded-1 me-2"></i><i
+                            class="fa-solid fa-trash border p-2 rounded-1"></i></td>
+                      </tr>
+                      <tr>
+                        <td><img src="img/class-avatar.jpg" alt=""> Classe 75</td>
+                        <td>15 Feb 2021</td>
+                        <td>20%</td>
+                        <td><span class="badge text-bg-success">Done</span></td>
+                        <td><i class="fa-solid fa-pencil border p-2 rounded-1 me-2"></i><i
+                            class="fa-solid fa-trash border p-2 rounded-1"></i></td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
               <div class="col-12">
@@ -137,38 +209,97 @@
                   <div class="card-header">
                     F.A.Q.
                   </div>
-                  <ul class="list-group list-group-flush px-2">
-                    <li class="list-group-item">An item</li>
-                    <li class="list-group-item">A second item</li>
-                    <li class="list-group-item">A third item</li>
-                  </ul>
+                  <div class="list-group list-group-flush px-2">
+                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                            Come posso aggiungere un nuovo studente?
+                          </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" style="">
+                          <div class="accordion-body">
+                            This is the first item's accordion body. It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the 
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true" aria-controls="panelsStayOpen-collapseTwo">
+                            Come posso accedere alle informazioni del mio account?
+                          </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show" style="">
+                          <div class="accordion-body">
+                             It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the 
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                            Posso usare questa dashboard da mobile?
+                          </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" style="">
+                          <div class="accordion-body">
+                             It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within 
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-12 col-lg-4">
-            <div class="row">
+            <div class="row gy-3">
               <div class="col-12">
+                <!-- CARD CHECKBOX -->
                 <div class="card">
                   <div class="card-header">
                     Todo
                   </div>
                   <ul class="list-group list-group-flush px-2">
-                    <li class="list-group-item">An item</li>
-                    <li class="list-group-item">A second item</li>
-                    <li class="list-group-item">A third item</li>
+                    <li class="list-group-item">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Kickoff nuove classi
+                        </label>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Lezione su Bootstrap 5 in classe #75
+                        </label>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Controllare username github studenti
+                        </label>
+                      </div>
+                    </li>
                   </ul>
                 </div>
               </div>
               <div class="col-12">
-                <div class="card">
-                  <div class="card-header">
-                    GRAFICO
-                  </div>
+                <div class="card card-stats">
                   <ul class="list-group list-group-flush px-2">
-                    <li class="list-group-item">An item</li>
-                    <li class="list-group-item">A second item</li>
-                    <li class="list-group-item">A third item</li>
+                    <li class="list-group-item">
+                      <img src="img/stats.jpeg" alt="">
+                      <p>Utenti attivi</p>
+                      <p>Lista degli utenti attivi in piattaforma nell'ultimo mese</p>
+                    </li>
+                    <li class="list-group-item">Gennaio: 1200</li>
+                    <li class="list-group-item">Febbraio: 800</li>
+                    <li class="list-group-item">Marzo: 1500</li>
                   </ul>
                 </div>
               </div>

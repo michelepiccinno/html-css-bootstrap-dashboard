@@ -24,8 +24,29 @@ flex-direction: column;
   color: white;
 }
 
+.text-sidebar:hover,
+tr:hover,
+li:hover {
+  opacity: .5;
+}
+
+.drop-bell {
+  border: none;
+  background-color: transparent;
+}
+
 .fa-bell {
   color: #ff8f00;
+}
+
+.dropstart {
+  position: relative!important;
+}
+
+.dropdown-menu {
+  position: absolute!important;
+  top: 1rem!important;
+  right: 1rem!important;
 }
 
 .mobile-logo {
@@ -37,6 +58,11 @@ flex-direction: column;
   flex-basis: 0;
 }
 
+.main-container-fluid {
+  height: calc(100vh - 60px);
+  overflow: auto;
+}
+
 .top-status-bar {
   background-color: #1b72e8;
   color: white;
@@ -46,13 +72,20 @@ flex-direction: column;
   background-color: #165bba;
 }
 
-.card .card-header {
-  font-size: 22px;
-  font-weight: 500;
+.card tr td:not(:first-child) {
+  text-align: end;
 }
 
-.card img {
+.card table thead {
+  --bs-table-bg: 5, 30, 52;
+}
+
+.card-table img {
   width: 25px;
+}
+
+.card-stats img {
+  width: 100%;
 }
 
 /*****MEDIA QUERY*****/
