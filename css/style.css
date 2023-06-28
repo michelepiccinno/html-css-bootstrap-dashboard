@@ -2,6 +2,10 @@
   --bs-link-color: white;
 }
 
+html {
+  overflow: hidden;
+}
+
 body {
   height: 100vh;
   display: flex;
